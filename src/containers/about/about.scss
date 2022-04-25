@@ -1,1 +1,6 @@
 @use '../../assets/styles/variables' as *;
+
+.about {
+  background-color: $bg-body;
+  height: 100vh;
+}

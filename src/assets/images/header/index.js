@@ -1,0 +1,5 @@
+export { default as BackImg } from './back2.png'
+export { default as FrontImg } from './front.png'
+export { default as FirstImg } from './first.png'
+export { default as SecondImg } from './second.png'
+export { default as ThirdImg } from './third.png'

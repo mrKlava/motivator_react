@@ -1,5 +1,7 @@
 @use '../../assets/styles/variables' as *;
 
+/* classes: btn btn-sec btn-thr btn-big btn-contr */ 
+
 .btn {
   cursor: pointer;
   background-color: $bg-btn-prm;
@@ -29,6 +31,8 @@
     background: $bg-btn-sec;
     color: $color-btn-sec;
 
+    padding: .125rem .625rem;
+
     border: 3px solid $color-btn-sec;
 
     &:hover {
@@ -53,7 +57,7 @@
     padding: .5rem 2rem;
   }
 
-  &_red {
+  &_contr {
     background-color: $bg-navbar;
 
     &:hover {
@@ -64,6 +68,10 @@
       background-color: inherit;
       border-color: $bg-navbar;
       color: $bg-navbar;
+
+      &.btn_big {
+        padding: .3125rem 1.8125rem;
+      }
 
       &:hover {
         background-color: $bg-navbar;
