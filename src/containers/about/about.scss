@@ -2,19 +2,22 @@
 
 .about {
   padding: 8rem 0;
-
+  // min-height: 100vh;
   background-image: url('../../assets/images/about/content-bg.svg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% auto;
-
+  background-size: cover;
+  background-size: 100%;
+  
   background-color: $bg-body;
-
+  
+  
   @media (max-width: $screen-md) {
     background-image: none;
   }
-
+  
   &-content {
+    
     display: flex;
     align-items: center;
     justify-content: space-between;

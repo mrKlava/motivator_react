@@ -1,10 +1,16 @@
 import React from 'react'
+import { Text } from '../../UI'
 
 import './footer.scss'
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <footer className='footer'>
+      <div className="footer-content">
+        <Text className='footer-content__text'>creaded by</Text>
+        <a className='footer-content__link' href="https://github.com/mrKlava" target='_blank'>mr.klava</a>
+      </div>
+    </footer>
   )
 }
 

@@ -11,8 +11,13 @@
   }
 
   &__img {
-    max-width: 55vh !important;
+    max-width: 60vh !important;
     width: 100%;
     z-index: 3;
+    
+    // @media (max-width: $screen-xxl) {
+    //   max-width: 90vh !important;
+    //   width: 100%;
+    // }
   }
 }

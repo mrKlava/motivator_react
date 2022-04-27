@@ -76,22 +76,22 @@ $text-xs:               .75rem;  // 12px
 //           SCREEN SIZE            //
 //////////////////////////////////////
 
-// Small small screen / phone small
+        // Small small screen / phone small
 $screen-xs:             320px;
 $screen-xs-min:         $screen-xs;             // 320px
 $screen-phone:          $screen-xs-min;         // 320px
 // $screen-xs-max:         $screen-sm-min - 1;   // 479px
         // Small screen / phone
-        $screen-sm:             480px;
-        $screen-sm-min:         $screen-sm;             // 480px
-        $screen-tablet:         $screen-sm-min;         // 480px
-        // $screen-sm-max:         ($screen-md-min - 1);   // 767px
+$screen-sm:             480px;
+$screen-sm-min:         $screen-sm;             // 480px
+$screen-tablet:         $screen-sm-min;         // 480px
+// $screen-sm-max:         ($screen-md-min - 1);   // 767px
         // Medium screen / tablet
-        $screen-md:             768px;
+$screen-md:             768px;
 $screen-md-min:         $screen-md;             // 768px
 $screen-desktop:        $screen-md-min;         // 768px
 // $screen-md-max:         ($screen-lg-min - 1);   // 991px
-// Medium screen / desktop small
+        // Medium screen / desktop small
 $screen-lg:             992px;
 $screen-lg-min:         $screen-lg;             // 992px
 $screen-desktop:        $screen-lg-min;         // 992px
@@ -99,7 +99,7 @@ $screen-desktop:        $screen-lg-min;         // 992px
 $screen-xl:             1200px;
 $screen-xl-min:         $screen-xl;             // 1200px
 $screen-desktop:        $screen-xl-min;         // 1200px
-// Large screen / desktop wide
+        // Large screen / desktop wide
 $screen-xxl:            1440px;
 $screen-xxl-min:        $screen-xxl;            // 1440px
 $screen-desktop-wide:   $screen-xxl-min;        // 1440px

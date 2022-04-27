@@ -2,7 +2,7 @@ import React from 'react'
 
 import './title.scss'
 
-/* classes: title */ 
+/* classes: black white*/ 
 function Title(props) {
   return (
     <h1 className={ props.className? `title ${props.className}` : 'title' }>

@@ -1,1 +1,42 @@
-@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/variables'as *;
+
+.sign {
+  padding: 8rem 0;
+  text-align: center;
+  background-image: url('../../assets/images/sign/ligne.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+  @media (max-width: $screen-md) {
+    padding: 2rem 0;
+  }
+
+  &-content {
+    padding: 4rem 0;
+    background-image: url('../../assets/images/sign/triangle.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+    @media (max-width: $screen-md) {
+      padding: 2rem 0;
+    }
+
+    &__title {
+
+      &::after {
+        display: block;
+        content: "";
+        width: 30%;
+        height: 3px;
+        background-color: $color-arrow;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      margin-bottom: 3rem;
+    }
+  }
+}
