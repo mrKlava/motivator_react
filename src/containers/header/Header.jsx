@@ -1,22 +1,22 @@
 import React, { useEffect, useRef } from 'react'
 import { BackImg, FirstImg, FrontImg, SecondImg, ThirdImg } from '../../assets/images/header'
+// import { Navbar } from '../../components'
 
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-
 import './header.scss'
+
 
 function Header() {
   gsap.registerPlugin(ScrollTrigger)
 
+  // Ref for header and selecto
   const header = useRef(null)
-
   const q = gsap.utils.selector(header)
   
   useEffect(() => {
-
-    const trg = header.current
+  const trg = header.current
 
     gsap.to(
       q('#header-bg'),
@@ -24,11 +24,9 @@ function Header() {
         y: '50vh',
         scrollTrigger: {
           trigger: trg,
-          // trigger: q('#header-bg'),
           start: '0 top',
           end: '100% top',
           scrub: 0,
-          markers: true,
         },
       }
     )
@@ -41,7 +39,6 @@ function Header() {
           start: '0 top',
           end: '100% top',
           scrub: 0,
-          markers: true,
         },
       }
     )
@@ -54,7 +51,6 @@ function Header() {
           start: '0 top',
           end: '100% top',
           scrub: 0,
-          markers: true,
         },
       }
     )
@@ -67,7 +63,6 @@ function Header() {
           start: '0 top',
           end: '100% top',
           scrub: 0,
-          markers: true,
         },
       }
     )

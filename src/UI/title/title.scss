@@ -1,0 +1,22 @@
+@use '../../assets/styles/variables' as *;
+
+.title {
+  font-family: $font-title;
+  text-transform: uppercase;
+  color: $color-title;
+  font-size: $text-xl;
+
+  @media (max-width: $screen-lg) {
+    font-size: calc($text-lg + 2rem);
+  }
+  @media (max-width: $screen-md) {
+    font-size: calc($text-lg + 1rem);
+  }
+
+  &.black {
+    color: $noir;
+  }
+  &.white {
+    color: $blanche;
+  }
+}

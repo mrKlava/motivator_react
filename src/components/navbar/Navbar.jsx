@@ -11,13 +11,13 @@ function Navbar() {
           <div className="navbar-inner-logo"></div>
           <ul className="navbar-inner-menu">
             <li className="navbar-inner-menu__item">
-              <Button className='btn btn_contr btn_thr'>EN</Button>
+              <Button className='btn_contr btn_thr'>EN</Button>
             </li>
             <li className="navbar-inner-menu__item">
-              <Button className='btn btn_contr'>sign in</Button>
+              <Button className='btn_contr'>sign in</Button>
             </li>
             <li className="navbar-inner-menu__item">
-              <Button className='btn btn_contr btn_sec'>explore</Button>
+              <Button className='btn_contr btn_sec'>explore</Button>
             </li>
           </ul>
         </div>

@@ -1,6 +1,214 @@
-@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/variables'as *;
 
 .about {
+  padding: 8rem 0;
+
+  background-image: url('../../assets/images/about/content-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+
   background-color: $bg-body;
-  height: 100vh;
+
+  @media (max-width: $screen-md) {
+    background-image: none;
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+
+    @media (max-width: $screen-md) {
+      flex-direction: column;
+      padding: 0;
+    }
+
+    &__item {
+      position: relative;
+
+      text-align: center;
+
+      @media (max-width: $screen-md) {
+        flex-direction: column;
+        padding: 0 1.5rem;
+      }
+
+      .title {
+        position: absolute;
+        left: 60%;
+        transform: translateX(-10%);
+        white-space: nowrap;
+
+        background: url('../../assets/images/about/title-bg.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+
+        padding: 5rem;
+        margin: -5rem;
+
+        @media (max-width: $screen-md) {
+          left: 10%;
+          transform: translateX(0);
+        }
+      }
+
+      /* Carousel item */
+      &:first-child {
+        width: 50%;
+        margin-right: 2rem;
+
+        @media (max-width: $screen-md) {
+          width: 100%;
+          margin: 0;
+
+          background: url('../../assets/images/about/persone-bg.svg');
+          background-repeat: no-repeat;
+        }
+      }
+
+      /* Info item */
+      &:last-child {
+        width: 40%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: $screen-md) {
+          width: 100%;
+          background: url('../../assets/images/about/text-bg.svg');
+          background-repeat: no-repeat;
+
+          padding: 4rem 3rem;
+        }
+
+        &:hover {
+          & .text {
+            transform: none;
+            padding-right: 1rem;
+
+            @media (max-width: $screen-md) {
+              padding-right: 0;
+            }
+          }
+
+          & .btn {
+            opacity: 1;
+          }
+        }
+
+        .text {
+          text-align: justify;
+
+          transform: perspective(30rem) rotateY(-15deg) translate3d(-10%, 15%, 0);
+
+          transition: transform .2s linear;
+          // text-shadow: 5px 10px 8px black;
+
+          @media (max-width: $screen-md) {
+            transform: perspective(30rem) rotateY(15deg) translate3d(10%, -15%, 0);
+          }
+        }
+
+        .btn {
+          margin-top: 1rem;
+          opacity: 0;
+
+          transition: opacity .3s linear;
+
+          @media (max-width: $screen-xxl) {
+            font-size: calc($text-md - .5rem);
+          }
+
+          @media (max-width: $screen-lg) {
+            font-size: calc($text-sm);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Carousel */
+
+.slide {
+  opacity: 0;
+
+  transition: opacity .3s linear;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+// disiable status bar ------------------------------
+.carousel-status {
+  display: none;
+}
+
+// btns prev next  -----------------------------------
+.carousel .control-arrow,
+.carousel.carousel-slider .control-arrow {
+  opacity: 1;
+  width: 3.2rem;
+  height: 3.2rem;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+// arrow 
+.carousel .control-arrow:before,
+.carousel.carousel-slider .control-arrow:before {
+  display: inline-block;
+  content: '';
+
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  transform: rotate(-135deg);
+}
+
+// prev
+.carousel .control-prev.control-arrow:before {
+  border-right: 3px solid $color-arrow;
+  border-top: 3px solid $color-arrow;
+
+  top: 50%;
+}
+
+// next
+.carousel .control-next.control-arrow:before {
+  border-left: 3px solid $color-arrow;
+  border-bottom: 3px solid $color-arrow;
+}
+
+// hover on button
+.carousel.carousel-slider .control-arrow:hover {
+  background-color: transparent;
+  color: $color-arrow-hover;
+}
+
+// hover on arrow
+.carousel .control-arrow:focus,
+.carousel .control-arrow:hover {
+  opacity: .5;
+}
+
+// dots ----------------------------------------------------
+.carousel .control-dots .dot {
+  background: $color-arrow-hover;
+  display: none;
+}
+
+.carousel .control-dots .dot.selected,
+.carousel .control-dots .dot:hover {
+  width: 9px;
+  height: 9px;
+  opacity: 1;
+  filter: alpha(opacity=100);
 }

@@ -1,0 +1,14 @@
+@use '../../assets/styles/variables' as *;
+
+.text {
+  font-family: $font-text;
+  font-size: $text-md;
+  color: $blanche;
+
+  @media (max-width: $screen-lg) {
+    font-size: calc($text-md - .5rem);
+  }
+  @media (max-width: $screen-md) {
+    font-size: calc($text-md - .725rem);
+  }
+}

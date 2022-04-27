@@ -1,0 +1,1 @@
+export { default as NflCardImg } from './nfl.png'
