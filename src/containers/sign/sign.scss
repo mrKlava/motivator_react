@@ -8,6 +8,10 @@
   background-position: center;
   background-size: 100%;
 
+  opacity: 0;
+
+  overflow: hidden;
+
   @media (max-width: $screen-md) {
     padding: 2rem 0;
   }
@@ -19,11 +23,15 @@
     background-position: center;
     background-size: 100% 100%;
 
+    opacity: 0;
+
     @media (max-width: $screen-md) {
       padding: 2rem 0;
     }
 
     &__title {
+      
+      margin-bottom: 3rem;
 
       &::after {
         display: block;
@@ -35,8 +43,6 @@
         left: 50%;
         transform: translateX(-50%);
       }
-
-      margin-bottom: 3rem;
     }
   }
 }

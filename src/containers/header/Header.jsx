@@ -1,76 +1,43 @@
 import React, { useEffect, useRef } from 'react'
 import { BackImg, FirstImg, FrontImg, SecondImg, ThirdImg } from '../../assets/images/header'
-// import { Navbar } from '../../components'
 
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 import './header.scss'
 
+gsap.registerPlugin(ScrollTrigger)
+
 
 function Header() {
-  gsap.registerPlugin(ScrollTrigger)
+  // GSAP - START
 
-  // Ref for header and selecto
-  const header = useRef(null)
-  const q = gsap.utils.selector(header)
-  
+  const headerSection = useRef(null)
+  const q = gsap.utils.selector(headerSection)
+
   useEffect(() => {
-  const trg = header.current
+    const trg = headerSection.current
+    let tl = gsap.timeline()
 
-    gsap.to(
-      q('#header-bg'),
-      {
-        y: '50vh',
-        scrollTrigger: {
-          trigger: trg,
-          start: '0 top',
-          end: '100% top',
-          scrub: 0,
-        },
-      }
-    )
-    gsap.to(
-      q('#header-third'),
-      {
-        y: '60vh',
-        scrollTrigger: {
-          trigger: trg,
-          start: '0 top',
-          end: '100% top',
-          scrub: 0,
-        },
-      }
-    )
-    gsap.to(
-      q('#header-second'),
-      {
-        y: '50vh',
-        scrollTrigger: {
-          trigger: trg,
-          start: '0 top',
-          end: '100% top',
-          scrub: 0,
-        },
-      }
-    )
-    gsap.to(
-      q('#header-first'),
-      {
-        y: '35vh',
-        scrollTrigger: {
-          trigger: trg,
-          start: '0 top',
-          end: '100% top',
-          scrub: 0,
-        },
-      }
-    )
-    
+    tl
+      .to(q('#header-bg'), 5, { y: '50vh'}, '-=5')
+      .to(q('#header-third'), 5, { y: '60vh' }, '-=5')
+      .to(q('#header-second'), 5, { y: '50vh' }, '-=5')
+      .to(q('#header-first'), 5, { y: '35vh' }, '-=5')
+
+    ScrollTrigger.create({
+      animation: tl,
+      trigger: trg,
+      start: '0 top',
+      end: '100% top',
+      markers: true,
+      scrub: 0,
+    })
   }, [])
+  // GSAP - END
 
   return (
-    <header ref={header} className='header'>
+    <header ref={headerSection} className='header'>
       <img id='header-bg' src={BackImg} alt="" />
       <img id='header-third' src={ThirdImg} alt="" />
       <img id='header-second' src={SecondImg} alt="" />
