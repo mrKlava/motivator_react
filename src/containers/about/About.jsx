@@ -1,19 +1,15 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import { NflCardImg } from '../../assets/images/about'
 import { Title, Button, Text } from '../../UI'
 import { CarouselItem } from '../../components'
 
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import './about.scss'
 
-gsap.registerPlugin(ScrollTrigger)
 
 
-function About() {
+const About = React.forwardRef( (props, ref) => {
 
   const arr = [
     { id: 1, text: 'first', img: NflCardImg },
@@ -21,56 +17,8 @@ function About() {
     { id: 3, text: 'third', img: NflCardImg },
   ]
 
-  // GSAP - START
-  gsap.config({
-    nullTargetWarn: false,
-  })
-
-  const aboutSection = useRef(null)
-  const q = gsap.utils.selector(aboutSection)
-
-  useEffect(() => {
-    const trg = aboutSection.current
-    let tl = gsap.timeline()
-
-    tl
-      .to(
-        q('.about-content'),
-        { duration: 1, opacity: 1 }
-      )
-      .fromTo(
-        q('.about-content__item__title'),
-        { duration: 2, x: '300px' },
-        { x: '0px' },
-        '-=1'
-      )
-      .fromTo(
-        q('.about-carousel'),
-        { duration: 2, x: '-100%' },
-        { x: '0px' },
-        '-=1'
-      )
-      .fromTo(
-        q('.about-text'),
-        { duration: 2, x: '100%' },
-        { x: '0px' },
-        '-=1'
-      )
-
-    ScrollTrigger.create({
-      animation: tl,
-      trigger: trg,
-      start: '30% center',
-      end: '90% center',
-      toggleActions: "play reverse play reverse",
-      markers: true,
-    })
-  }, [])
-
-  // GSAP - END
-
   return (
-    <section ref={aboutSection} className='about'>
+    <section ref={ref} className='about'>
       {/* <div className="container"> */}
       <div className='about-content'>
         <div className='about-content__item about-carousel'>
@@ -96,6 +44,6 @@ function About() {
       {/* </div> */}
     </section>
   )
-}
+})
 
 export default About
