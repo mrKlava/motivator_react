@@ -3,12 +3,7 @@
 .sign {
   padding: 8rem 0;
   text-align: center;
-  background-image: url('../../assets/images/sign/ligne.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-
-  opacity: 0;
+  background-color: $bg-body;
 
   overflow: hidden;
 
@@ -18,7 +13,7 @@
 
   &-content {
     padding: 4rem 0;
-    background-image: url('../../assets/images/sign/triangle.svg');
+    background-image: url('../../assets/images/sign/triangle.svg'), url('../../assets/images/sign/ligne.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;

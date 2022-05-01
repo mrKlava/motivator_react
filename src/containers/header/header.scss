@@ -1,39 +1,47 @@
-@use '../../assets/styles/variables' as *;
-
 .header {
   position: relative;
   height: 100vh;
 
-  z-index: -1;
-
   overflow: hidden;
 
-  img {
-    position: absolute;
-    width: 100%;
-    object-fit: cover;
+  .parallax {
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
-    &#header {
-      &-bg {
-        top: -1%;
-        height: 50vh;
-      }
-      &-third {
-        bottom: 22%;
-        height: 44vh;
-      }
-      &-second {
-        bottom: 15%;
-        height: 44vh;
-      }
-      &-first {
-        bottom: 0%;
-        height: 44vh;
-      }
-      &-front {
-        bottom: 0;
-        height: 44vh;
-      }
+    height: 44vh;
+    width: 100%;
+
+    position: fixed;
+    z-index: -1;
+  }
+
+  #header {
+    &-bg {
+      background-image: url('../../assets/images/header/back2.png');
+      top: -1%;
+      height: 65vh;
+    }
+
+    &-third {
+      background-image: url('../../assets/images/header/third.png');
+      bottom: 22%;
+    }
+
+    &-second {
+      background-image: url('../../assets/images/header/second.png');
+      bottom: 15%;
+    }
+
+    &-first {
+      background-image: url('../../assets/images/header/first.png');
+      bottom: 0%;
+    }
+
+    &-front {
+      background-image: url('../../assets/images/header/front.png');
+      position: absolute;
+      bottom: 0%;
     }
   }
 }

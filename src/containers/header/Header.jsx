@@ -8,11 +8,11 @@ const Header = React.forwardRef((props, ref) => {
 
   return (
     <header ref={ref} className='header'>
-      <img id='header-bg' src={BackImg} alt="" />
-      <img id='header-third' src={ThirdImg} alt="" />
-      <img id='header-second' src={SecondImg} alt="" />
-      <img id='header-first' src={FirstImg} alt="" />
-      <img id='header-front' src={FrontImg} alt="" />
+      <div className='parallax' data-depth='0.30' id='header-bg'></div>
+      <div className='parallax' data-depth='0.50' id='header-third'></div>
+      <div className='parallax' data-depth='0.60' id='header-second'></div>
+      <div className='parallax' data-depth='1.00' id='header-first'></div>
+      <div className='parallax' data-depth='0' id='header-front'></div>
     </header>
   )
 })

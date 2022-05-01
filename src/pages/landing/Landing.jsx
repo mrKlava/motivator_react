@@ -22,32 +22,31 @@ function Landing() {
   const aboutSection = useRef(null)
   const signSection = useRef(null)
 
-  /* Header section */
   useEffect(() => {
+    /* Header section */
     const selHeader = gsap.utils.selector(headerSection)
 
     const header = headerSection.current
-    let tlHeader = gsap.timeline()
 
-    tlHeader
-      .to(selHeader('#header-bg'), 5, { y: '50vh' }, '-=5')
-      .to(selHeader('#header-third'), 5, { y: '60vh' }, '-=5')
-      .to(selHeader('#header-second'), 5, { y: '50vh' }, '-=5')
-      .to(selHeader('#header-first'), 5, { y: '35vh' }, '-=5')
-
-    ScrollTrigger.create({
-      animation: tlHeader,
-      trigger: header,
-      start: '0 top',
-      end: '100% top',
-      markers: true,
-      scrub: 0,
-      invalidateOnRefresh: true,
+    let tlHeader = gsap.timeline({
+      scrollTrigger: {
+        trigger: header,
+        start: "top top",
+        end: "bottom top",
+        scrub: 0,
+        markers: true,
+      }
     })
 
+    gsap.utils.toArray(".parallax").forEach(layer => {
+      const depth = layer.dataset.depth;
+      const movement = -(layer.offsetHeight * depth)
+      console.log(depth)
+      console.log(movement)
+      tlHeader.to(layer, {y: movement, ease: "none"}, 0)
+    });
 
     /* About section */
-
     const selAbout = gsap.utils.selector(aboutSection)
 
     const about = aboutSection.current
@@ -88,7 +87,6 @@ function Landing() {
 
 
     /* Sign Section */
-
     const selSign = gsap.utils.selector(signSection)
 
     const sign = signSection.current
@@ -96,13 +94,8 @@ function Landing() {
 
     tlSign
       .to(
-        sign,
-        { duration: 1, opacity: 1 }
-      )
-      .to(
         selSign('.sign-content'),
-        { duration: 0.5, opacity: 1 },
-        '-=1'
+        { duration: 1, opacity: 1 }
       )
       .fromTo(
         selSign('.sign-suptitle'),
@@ -135,40 +128,40 @@ function Landing() {
 
   
   
-  const [width, setWidth] = useState(window.innerWidth)
-  const [height, setHeight] = useState(window.innerHeight)
+  // const [width, setWidth] = useState(window.innerWidth)
+  // const [height, setHeight] = useState(window.innerHeight)
   
-  useEffect(() => {
-    ScrollTrigger.update()
-  }, [width])
+  // useEffect(() => {
+  //   ScrollTrigger.update()
+  // }, [width])
 
-  useEffect(() => {
-    updateDimensions()
-    window.addEventListener("resize", updateDimensions)
-    // console.log(`Width: ${width}`)
-    // console.log(`Height: ${height}`)
+  // useEffect(() => {
+  //   updateDimensions()
+  //   window.addEventListener("resize", updateDimensions)
+  //   // console.log(`Width: ${width}`)
+  //   // console.log(`Height: ${height}`)
 
-    return () => window.removeEventListener("resize", updateDimensions)
-  })
+  //   return () => window.removeEventListener("resize", updateDimensions)
+  // })
 
-  const updateDimensions = () => {
-    const width = window.innerWidth
-    const height = width.innerHeight
-    setWidth(width)
-    setHeight(height)
-  }
+  // const updateDimensions = () => {
+  //   const width = window.innerWidth
+  //   const height = width.innerHeight
+  //   setWidth(width)
+  //   setHeight(height)
+  // }
 
 
-  useEffect( () => {
-    const header = headerSection.current
-    const about = aboutSection.current
-    const sign = signSection.current
+  // useEffect( () => {
+  //   const header = headerSection.current
+  //   const about = aboutSection.current
+  //   const sign = signSection.current
 
-    console.dir(`Header ${header.scrollHeight}`)
-    console.dir(`About ${about.scrollHeight}`)
-    console.dir(`Sign ${sign.scrollHeight}`)
+  //   console.dir(`Header ${header.scrollHeight}`)
+  //   console.dir(`About ${about.scrollHeight}`)
+  //   console.dir(`Sign ${sign.scrollHeight}`)
 
-  }, [width])
+  // }, [width])
 
 
 
