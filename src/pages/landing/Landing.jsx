@@ -24,8 +24,6 @@ function Landing() {
 
   useEffect(() => {
     /* Header section */
-    const selHeader = gsap.utils.selector(headerSection)
-
     const header = headerSection.current
 
     let tlHeader = gsap.timeline({
@@ -46,6 +44,7 @@ function Landing() {
       tlHeader.to(layer, {y: movement, ease: "none"}, 0)
     });
 
+    
     /* About section */
     const selAbout = gsap.utils.selector(aboutSection)
 
@@ -168,13 +167,13 @@ function Landing() {
   // GSAP - END
 
   return (
-    <>
+    <main className='landing'>
       <Navbar />
       <Header ref={headerSection} />
       <About ref={aboutSection} />
       <Sign ref={signSection} />
       <Footer />
-    </>
+    </main>
   )
 }
 

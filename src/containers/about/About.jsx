@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import { Carousel } from 'react-responsive-carousel'
 import { NflCardImg } from '../../assets/images/about'
 import { Title, Button, Text } from '../../UI'
@@ -38,7 +39,9 @@ const About = React.forwardRef( (props, ref) => {
         </div>
         <div className='about-content__item about-text'>
           <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ante tellus, placerat lobortis sapien et, fermentum posuere tellus. Aliquam erat volutpat. Integer maximus nisl libero, eget imperdiet libero tempor ut. Donec massa mauris, imperdiet non ex sit amet, elementum tincidunt quam. Ut metus orci, porta vel congue ac, efficitur ac metus. Aliquam ut pharetra ex, sit amet tincidunt elit. Mauris fringilla velit et turpis luctus elementum. Etiam ultrices neque non nulla egestas luctus.</Text>
-          <Button className='btn_thr btn_big'>Explore for more stories</Button>
+          <Link to='/explore'>
+            <Button className='btn_thr btn_big'>Explore for more stories</Button>
+          </Link>
         </div>
       </div>
       {/* </div> */}

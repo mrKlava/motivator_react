@@ -1,11 +1,17 @@
+import { Routes, Route } from "react-router-dom";
+import { Landing, Explore, SignIn } from './pages'
+
 import './App.scss'
-import { Landing } from './pages'
 
 
 function App() {
   return (
     <div className="App">
-      <Landing/>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="explore" element={<Explore />} />
+        <Route path="sign-in" element={<SignIn />} />
+      </Routes>
     </div>
   )
 }
