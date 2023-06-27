@@ -7,7 +7,7 @@ import './App.scss'
 function App() {
   return (
     <div className="App">
-      <Routes>
+      <Routes basename="/motivator_react">
         <Route path="/motivator_react" element={<Landing />} />
         <Route path="explore" element={<Explore />} />
         <Route path="sign-in" element={<SignIn />} />
