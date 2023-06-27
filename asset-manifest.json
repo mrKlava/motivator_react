@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/motivator-react/static/css/main.0a0b9964.css",
-    "main.js": "/motivator-react/static/js/main.ab171820.js",
-    "static/media/back2.png": "/motivator-react/static/media/back2.1d7191e43c0d5573006e.png",
-    "static/media/second.png": "/motivator-react/static/media/second.151ba1d22044c75041e3.png",
-    "static/media/front.png": "/motivator-react/static/media/front.a0d2fd0247ad5cce15b8.png",
-    "static/media/first.png": "/motivator-react/static/media/first.54479f2e5534aa044dbb.png",
-    "static/media/third.png": "/motivator-react/static/media/third.98290587724ee4ed59fe.png",
-    "static/media/nfl.png": "/motivator-react/static/media/nfl.7e08f8acd40952e3b90a.png",
-    "static/media/content-bg.svg": "/motivator-react/static/media/content-bg.be8cba3e912b61b4d0a5.svg",
-    "static/media/title-bg.svg": "/motivator-react/static/media/title-bg.af6ba7e0f334dfd325c2.svg",
-    "static/media/triangle.svg": "/motivator-react/static/media/triangle.b7dce7272cd985f4a0b0.svg",
-    "static/media/ligne.svg": "/motivator-react/static/media/ligne.9842b86ea9d4d6010cfc.svg",
-    "static/media/persone-bg.svg": "/motivator-react/static/media/persone-bg.8628b720e7abc6cdb4ca.svg",
-    "static/media/text-bg.svg": "/motivator-react/static/media/text-bg.eec5f4a485e248b16bed.svg",
-    "index.html": "/motivator-react/index.html",
-    "main.0a0b9964.css.map": "/motivator-react/static/css/main.0a0b9964.css.map",
-    "main.ab171820.js.map": "/motivator-react/static/js/main.ab171820.js.map"
+    "main.css": "/motivator_react/static/css/main.0ec70486.css",
+    "main.js": "/motivator_react/static/js/main.c1d048ab.js",
+    "static/media/back2.png": "/motivator_react/static/media/back2.1d7191e43c0d5573006e.png",
+    "static/media/second.png": "/motivator_react/static/media/second.151ba1d22044c75041e3.png",
+    "static/media/front.png": "/motivator_react/static/media/front.a0d2fd0247ad5cce15b8.png",
+    "static/media/first.png": "/motivator_react/static/media/first.54479f2e5534aa044dbb.png",
+    "static/media/third.png": "/motivator_react/static/media/third.98290587724ee4ed59fe.png",
+    "static/media/nfl.png": "/motivator_react/static/media/nfl.7e08f8acd40952e3b90a.png",
+    "static/media/content-bg.svg": "/motivator_react/static/media/content-bg.be8cba3e912b61b4d0a5.svg",
+    "static/media/title-bg.svg": "/motivator_react/static/media/title-bg.af6ba7e0f334dfd325c2.svg",
+    "static/media/triangle.svg": "/motivator_react/static/media/triangle.b7dce7272cd985f4a0b0.svg",
+    "static/media/ligne.svg": "/motivator_react/static/media/ligne.9842b86ea9d4d6010cfc.svg",
+    "static/media/persone-bg.svg": "/motivator_react/static/media/persone-bg.8628b720e7abc6cdb4ca.svg",
+    "static/media/text-bg.svg": "/motivator_react/static/media/text-bg.eec5f4a485e248b16bed.svg",
+    "index.html": "/motivator_react/index.html",
+    "main.0ec70486.css.map": "/motivator_react/static/css/main.0ec70486.css.map",
+    "main.c1d048ab.js.map": "/motivator_react/static/js/main.c1d048ab.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a0b9964.css",
-    "static/js/main.ab171820.js"
+    "static/css/main.0ec70486.css",
+    "static/js/main.c1d048ab.js"
   ]
 }
