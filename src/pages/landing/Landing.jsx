@@ -32,7 +32,7 @@ function Landing() {
         start: "top top",
         end: "bottom top",
         scrub: 0,
-        markers: true,
+        // markers: true,
       }
     })
 
@@ -81,7 +81,7 @@ function Landing() {
       start: '30% 70%',
       end: '90% 70%',
       toggleActions: "play reverse play reverse",
-      markers: true,
+      // markers: true,
     })
 
 
@@ -121,7 +121,7 @@ function Landing() {
       start: 'top 70%',
       end: 'bottom 70%',
       toggleActions: "play reverse play reverse",
-      markers: true,
+      // markers: true,
     })
   }, [])
 
