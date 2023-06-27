@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/motivator_react" element={<Landing />} />
         <Route path="explore" element={<Explore />} />
         <Route path="sign-in" element={<SignIn />} />
         <Route path="/*" element={<Landing />} />
